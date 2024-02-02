@@ -8,14 +8,14 @@ import numpy as np
 app = FastAPI()
 
 # Setup CORS (Cross-Origin Resource Sharing)
-#origins = ["*"]  # You might want to change this to a more restrictive list of allowed origins
-#app.add_middleware(
-    #CORSMiddleware,
-    #allow_origins=origins,
-    #allow_credentials=True,
-    #allow_methods=["*"],
-    #allow_headers=["*"],
-#)
+origins = ["*"]  # You might want to change this to a more restrictive list of allowed origins
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def func():
