@@ -16,6 +16,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/")
+def func():
+    return {"name":"plantasap"}
 @app.post("/save_image")
 def save_and_convert_image(base64_image:str):
     # Decode base64 image
