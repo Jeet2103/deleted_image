@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+python-multipart
+os
+opencv-python
+base64
+numpy
